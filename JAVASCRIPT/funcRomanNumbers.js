@@ -5,16 +5,15 @@ function decimalToRoman( number ) {
 
   var ind = RN.length-1;
   var retRN = '';
-  console.log('start ');
 
   while ( number > 0 ) {
-	div = Math.floor(number/VRN[ind]);
-	number=number%VRN[ind];
+	  div = Math.floor(number/VRN[ind]);
+	  number=number%VRN[ind];
 
-	while ( div-- ) {
-	  retRN = retRN + RN[ind];
-	}
-	ind--;
+	  while ( div-- ) {
+	    retRN = retRN + RN[ind];
+  	}
+	  ind--;
   }
 
   return retRN;
