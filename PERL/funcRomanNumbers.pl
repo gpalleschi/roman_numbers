@@ -31,7 +31,7 @@ sub romanToDecimal {
     $retDEC = 0;
 
     for ( $ind=0; $ind < $lenRN; $ind++ ) {
-      printf("\n %d : %s \n", $ind, substr($cpRN, $ind, 1));
+#[]      printf("\n %d : %s \n", $ind, substr($cpRN, $ind, 1));
       if ( substr($cpRN, $ind, 1) eq 'I' ) {
         $retDEC = $retDEC + 1;
       }
