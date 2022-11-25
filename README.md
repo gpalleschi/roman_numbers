@@ -1,11 +1,11 @@
 # roman_numbers
 
-Collection of functions to convert arabic numbers to/from roman numeral in Javascript, SQL, C and Perl.  
+Collection of functions to convert arabic numbers to/from roman numeral in Javascript, SQL, C, Perl, Python3 and Rust.  
 
 Functions are :  
 
 ***decimalToRoman*** : From Decimal Number to Roman Number  
-***romanToDecimal*** : From Roman Number to Decimal Number  
+***romanToDecimal*** : From Roman Number to Decimal Number 
 
 Roman numerals are a numeral system that originated in ancient Rome and remained the usual way of writing numbers throughout Europe well into the Late Middle Ages. Numbers in this system are represented by combinations of letters from the Latin alphabet. Modern style uses seven symbols, each with a fixed integer value:   
 

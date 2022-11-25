@@ -81,6 +81,6 @@ sub romanToDecimal {
 #
 #printf("\n%s\n",$res);
 #
-#$res = romanToDecimal("DCLXXVII");
+#$res = romanToDecimal("MCMLXXI");
 #
 #printf("\n%d\n",$res);
