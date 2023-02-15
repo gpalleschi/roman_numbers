@@ -1,23 +1,17 @@
-#include <iostream>
 #include <cstring>
+#include <vector>
+#include <iostream>
+#include <numeric>
 #include "romanNumber.h"
 
-char *romanNumber::decimalToRoman(int number)
+std::vector<const char *> romanNumber::decimalToRoman(int number)
 {
     int ind=TOTRN;
-    retRN = NULL;
-    int posRN = 0;
     while(number>0) {
       int div = number/VRN[ind];
       number = number%VRN[ind];
       while(div--) {
-        /* Remember to free this area after used */
-        if ( (retRN = (char *)realloc(retRN,posRN+strlen(RN[ind])+1)) == NULL ) {
-          retRN=NULL;
-          break;
-        }
-        strcpy(&retRN[posRN],RN[ind]);
-        posRN+=strlen(RN[ind]);
+        retRN.push_back(RN[ind]);
       }
       ind--;
     }
@@ -75,25 +69,27 @@ int romanNumber::romanToDecimal(char *cpRN) {
 
 romanNumber::romanNumber() {
 //  std::cout << "\nCostruttore\n";
-  retRN = NULL;
+  retRN.clear();
 }
 
 romanNumber::~romanNumber() {
 //  std::cout << "\nDistruttore\n";
-  delete retRN;
+  retRN.clear();
 }
 
 // TO TEST
-//int main(int argc, char**argv) {
-//
-//  romanNumber myRN;
-//
-//  int decNum = myRN.romanToDecimal(argv[1]);
-//
-//  std::cout << "\n Roman Number " << argv[1] << " : " << decNum << "\n";
-//  std::cout << "\n Decimal Number " << decNum << " : " << myRN.decimalToRoman(decNum) << "\n";
-//
-//  std::cout << "\n";
-//
-//  return(0);
-//}	
+int main(int argc, char**argv) {
+
+  romanNumber myRN;
+
+  int decNum = myRN.romanToDecimal(argv[1]);
+  std::vector<const char *> vec = myRN.decimalToRoman(decNum);
+  std::string tradDR = std::accumulate(vec.begin(), vec.end(), std::string(""));
+
+  std::cout << "\n Roman Number " << argv[1] << " : " << decNum << "\n";
+  std::cout << "\n Decimal Number " << decNum << " : " << tradDR << "\n";
+
+  std::cout << "\n";
+
+  return(0);
+}	
