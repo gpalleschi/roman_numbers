@@ -47,15 +47,18 @@ class romanNumber {
       }
 
       if (i > 0) {
-        if ((rn[i] == 'V' || rn[i] == 'X') && rn[i - 1] == 'I') {
+        if ((rnToConv[i] == 'V' || rnToConv[i] == 'X') &&
+            rnToConv[i - 1] == 'I') {
           retDEC -= 1 + 1;
         }
 
-        if ((rn[i] == 'L' || rn[i] == 'C') && rn[i - 1] == 'X') {
+        if ((rnToConv[i] == 'L' || rnToConv[i] == 'C') &&
+            rnToConv[i - 1] == 'X') {
           retDEC -= 10 + 10;
         }
 
-        if ((rn[i] == 'D' || rn[i] == 'M') && rn[i - 1] == 'C') {
+        if ((rnToConv[i] == 'D' || rnToConv[i] == 'M') &&
+            rnToConv[i - 1] == 'C') {
           retDEC -= 100 + 100;
         }
       }
@@ -70,7 +73,6 @@ class romanNumber {
       int div = number ~/ vrn[ind];
       number = number % vrn[ind];
       while (div-- > 0) {
-        /* Remember to free this area after used */
         retRN = retRN + rn[ind];
       }
       ind--;

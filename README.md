@@ -1,6 +1,6 @@
 # roman_numbers
 
-Collection of functions to convert arabic numbers to/from roman numeral in Javascript, SQL, C, C++, Perl, Python3, Dart and Rust.  
+Collection of functions to convert arabic numbers to/from roman numeral in JAVA, Javascript, SQL, C, C++, Perl, Python3, Dart and Rust.  
 
 Functions are :  
 

@@ -80,6 +80,6 @@ int romanToDecimal(char *cpRN) {
 TO TEST
 void *main(int argc, char**argv) {
   printf("\n Roman Number %s : %d\n",argv[1],romanToDecimal(argv[1]));
-  printf("\n Roman Number %s : %d\n",argv[1],romanToDecimal2(argv[1]));
+  printf("\n Roman Number %s : %d\n",argv[1],romanToDecimal(argv[1]));
 }	
 */
